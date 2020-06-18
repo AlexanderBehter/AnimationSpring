@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q6Z-Nl-aKJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="eiU-49-dRB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="Q6Z-Nl-aKJ" customClass="ViewController" customModule="AnimationCoreDataApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d2b-qi-4b7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41r-Mb-Urp" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="107" y="692" width="200" height="63"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="OXa-LU-p9b"/>
+                                    <constraint firstAttribute="height" constant="63" id="wpW-Zy-eMN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <state key="normal" title="Animation Go">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionSpringView:" destination="Q6Z-Nl-aKJ" eventType="touchUpInside" id="Ecf-FM-9Qs"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0o8-mi-sKF" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="67" y="103" width="280" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="JY4-Bd-wI0">
+                                        <rect key="frame" x="53.5" y="90.5" width="173.5" height="99.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Animation :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vP-7u-5oP">
+                                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="28"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-Mx-OP1">
+                                                <rect key="frame" x="15.5" y="50" width="142" height="49.5"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="39"/>
+                                                <color key="textColor" red="0.076424746660000001" green="0.085947533059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.58049096970000003" green="0.97591777999999996" blue="0.97888908500000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="1" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JY4-Bd-wI0" firstAttribute="centerY" secondItem="0o8-mi-sKF" secondAttribute="centerY" id="3Eh-IT-H8o"/>
+                                    <constraint firstAttribute="width" constant="280" id="HUS-9s-CA0"/>
+                                    <constraint firstItem="JY4-Bd-wI0" firstAttribute="centerX" secondItem="0o8-mi-sKF" secondAttribute="centerX" id="K3K-Km-nKt"/>
+                                    <constraint firstAttribute="height" constant="280" id="h3v-IL-KAS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.226205349" green="0.26192605499999999" blue="0.31183692810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fG4-Fi-7N2" firstAttribute="bottom" secondItem="41r-Mb-Urp" secondAttribute="bottom" constant="107" id="5Qj-RB-Xhq"/>
+                            <constraint firstItem="41r-Mb-Urp" firstAttribute="centerX" secondItem="fG4-Fi-7N2" secondAttribute="centerX" id="dmK-2i-qNG"/>
+                            <constraint firstItem="0o8-mi-sKF" firstAttribute="top" secondItem="fG4-Fi-7N2" secondAttribute="top" constant="59" id="ieT-Cu-hGt"/>
+                            <constraint firstItem="0o8-mi-sKF" firstAttribute="centerX" secondItem="fG4-Fi-7N2" secondAttribute="centerX" id="tUJ-ra-SCb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fG4-Fi-7N2"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonAnimate" destination="41r-Mb-Urp" id="Uou-HR-iBk"/>
+                        <outlet property="nameAnimationLabel" destination="AQn-Mx-OP1" id="oBL-F9-h99"/>
+                        <outlet property="springView" destination="0o8-mi-sKF" id="7lf-Zl-tNE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QO0-jb-R2e" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="88.125" y="108.80281690140845"/>
         </scene>
     </scenes>
 </document>
